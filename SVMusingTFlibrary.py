@@ -7,6 +7,7 @@
 #TF documentation for SVM, "fit", and "evaluate" say that some
 #arguments are deprecated and will be removed in 2016 and to migrate
 #to tf.estimator, but there's no SVM model in there?
+#TF recommends using a custom model_fn for SVMs
 #link: https://www.tensorflow.org/api_docs/python/tf/contrib/learn/SVM
 #working on conversion
 
