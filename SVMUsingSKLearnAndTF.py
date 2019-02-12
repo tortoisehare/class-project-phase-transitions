@@ -26,18 +26,17 @@ X = irisdata.drop('Class', axis=1) #we can use this to cut off the "y" column th
 y = irisdata['Class']
 #X, y = read_data("insert_title_here.txt") #alternative option for importing data
 
-#option for splitting into sets - use sklearn's module (which randomly chooses subsets), test_size set to 20% atm
+#option for splitting into sets - use sklearn's module (which randomly chooses subsets), test_size set to 20%
+#at the moment (80/10/10)
 '''
 train_test_split(arrays, test_size, train_size, random_state (pick seed for randomization), 
 shuffle (whether or not to shuffle data), stratify)
 '''
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, random_state=31, shuffle=True)
+X_train, X_testdev, y_train, y_testdev = train_test_split(X, y, test_size = 0.20, random_state=31, shuffle=True)
 
-#create dev set from test set distribution
-X_dev = X_test.split(50%) #figure out code
-X_test = X_test.split(other 50%)
-y_dev = y_test.split(same 50%)
-y_test = y_test.split(other 50%)
+#create dev set from test set distribution - I think this would work?
+X_dev, X_test, y_dev, y_test = train_test_split(X_testdev, y_testdev, test_size = 0.50, random_state=31, shuffle=True)
+
 
 #creating the model
 '''
