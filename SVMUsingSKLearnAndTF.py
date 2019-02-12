@@ -1,5 +1,7 @@
 #Option 2: Binary Classification using SKLearn's SVM and TensorFlow
-#If I can't get a model just in TF, this can be one that uses both
+#Author: Stephanie Tietz
+
+#If I can't get a model just in TF, this can be one that uses sklearn and data structures from TF
 #still working on it
 
 from sklearn import svm
