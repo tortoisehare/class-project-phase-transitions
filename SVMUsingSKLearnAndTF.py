@@ -43,10 +43,11 @@ irisdata = datasets.load_iris()
 #...
 #X, y = read_data("insert_title_here.txt") #alternative option for importing data
 #data = pd.read_csv("insert_title_here.csv", index_col=0) #if the first row is an index
+#in case we want to convert from sklearn format to pandas format -->
 data = pd.DataFrame(data= np.c_[irisdata['data'], irisdata['target']],
                      columns= irisdata['feature_names'] + ['target'])
 print(data.head())
-
+#np.c_ is "concatenate"
 
 
 #PREPROCESSING
@@ -133,7 +134,7 @@ print(classification_report(y_test,y_pred))
 #model_grid = GridSearchCV(svm.SVC(), param_grid, verbose=1)
  
 # Train the classifier
-#model_grid.fit(X_train, y_train)
+#model_grid.fit(X_dev, y_dev)
  
 # model = grid.best_estimator_()
 #print("Best Parameters:\n", model_grid.best_params_)
