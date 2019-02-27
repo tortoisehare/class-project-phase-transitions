@@ -109,9 +109,9 @@ with tf.Session() as sess:
     #run through epochs
     for epoch in range(training_epochs):
         avg_cost = 0.0
-        tot_batch = int(len(X)/batch_size)
-        X_batches = np.array_split(X, tot_batch)
-        Y_batches = np.array_split(Y, tot_batch)
+        tot_batch = int(len(X_train)/batch_size)
+        X_batches = np.array_split(X_train, tot_batch)
+        Y_batches = np.array_split(Y_train, tot_batch)
         
         #run through batches in epoch
         for i in range(total_batch):
