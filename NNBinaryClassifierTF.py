@@ -123,13 +123,13 @@ with tf.Session() as sess:
             
         cost_so_far.append(avgcost)
         
-        #training loss, plot per epoch
-        plt.figure
-        plt.plot(cost_so_far)
-        plt.title("Training Loss")
-        plt.xlabel("Epoch")
-        plt.ylabel("Cost")
-        plt.show()
+    #training loss, plot per epoch
+    plt.figure
+    plt.plot(cost_so_far)
+    plt.title("Training Loss")
+    plt.xlabel("Epoch")
+    plt.ylabel("Cost")
+    plt.show()
     
     #make a prediction using logits (fully_connected)
     pred = sess.run([logits], feed_dict = {x: X_test})[0]
