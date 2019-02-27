@@ -132,8 +132,8 @@ with tf.Session() as sess:
     plt.show()
     
     #make a prediction using logits (fully_connected)
-    pred = sess.run([logits], feed_dict = {x: X_test})[0]
-    y_hat = np.where(y_prob<0.5, 0, 1)
+    pred = sess.run([logits], feed_dict = {x: X_dev})[0]
+    y_hat = np.where(pred<0.5, 0, 1)
     
     #Calculate test accuracy
     accuracy = np.sum(Y_test.reshape(-1,1)==y_hat)/len(Y_test)
