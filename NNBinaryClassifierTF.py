@@ -1,10 +1,9 @@
 #Binary Classification using a Neural Network in TF
-#Author: Stephanie Tietz
+#Authors: Stephanie Tietz, Anjli Patel
 
 #right now, one hidden layer with 100 nodes
 
 import numpy as np
-#from sklearn.datasets import make_moons
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import tensorflow as tf
@@ -102,19 +101,17 @@ cost_so_far = []
 learning_rate = 0.01
 training_epochs = 100
 batch_size = 2
-#display_step = 1
 
 #use Adam Optimizer
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
 
-#init_op = tf.initialize_all_variables()
+#initialize global variables
 init = tf.global_variables_initializer()
 
 #run sessions
 with tf.Session() as sess:
     sess.run(init) #initiate global variables
-    #sess.run(init_op) #initialize all variables
     
     #run through epochs
     for epoch in range(training_epochs):
@@ -126,7 +123,7 @@ with tf.Session() as sess:
         #run through batches in epoch
         for i in range(tot_batch):
             batch_x, batch_y = X_batches[i], Y_batches[i]
-            #print("In tot_batch loop")
+
             #run Adam and calculate cost
             _, cost_ = sess.run([optimizer, cost], feed_dict = {X_input: batch_x, y: batch_y})
             avgcost += cost_/tot_batch
