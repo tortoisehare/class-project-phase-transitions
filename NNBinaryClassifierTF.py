@@ -1,5 +1,4 @@
 #Binary Classification using a Neural Network in TF
-#Authors: Stephanie Tietz, Anjli Patel
 
 #right now, one hidden layer with 100 nodes
 
