@@ -65,7 +65,7 @@ Option 1 - use TF's (fully_connected) to run the layers
 hidden1 = fully_connected(X_input, n_hidden_1, activation_fn=tf.nn.relu,
                          weights_initializer=initializer)
 #output layer using sigmoid for now
-logits = fully_connected(hidden1, n_output, activation_fn=tf.nn.sigmoid,
+logits = fully_connected(hidden1, n_output, activation_fn=tf.nn.linear,
                         weights_initializer=initializer)
 
 
