@@ -1,0 +1,8 @@
+This is a dummy file to create the new folder. I've put:
+
+1. a post-processing script that calculates the precision, recall, and f1 score for a set on inputs y_pred_test.npy and y_test.npy
+2. sample y_pred_test.npy and y_pred_test.npy files
+
+
+March 7, 2019
+Script currently supports: comparing 1s and 0s, no thresholding. No plotting yet, since we don't have enough outputs to plot. 
